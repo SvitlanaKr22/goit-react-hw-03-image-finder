@@ -21,8 +21,8 @@ const Searchform = ({ onSearch }) => (
     initialValues={{ searchName: '' }}
     validationSchema={SignupSchema}
     onSubmit={(values, actions) => {
-      console.log('sabmit forma:', values);
-      onSearch(values);
+      const { searchName } = values;
+      onSearch(searchName);
       actions.resetForm();
     }}
   >
